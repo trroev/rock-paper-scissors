@@ -1,27 +1,28 @@
-// Function allowing computer to generate a random selection
+// function allowing computer to generate a random selection
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-//Setting the score at 0 to begin the game
+
+// setting the score at 0 to begin the game
 let playerScore = 0;
 let computerScore = 0;
 
-// Function to play a single round of Rock, Paper, Scissors
+// function to play a single round of Rock, Paper, Scissors
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return "It's a Tie!"
+        return "It's a Tie!";
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')
     ) {
         playerScore++;
-        return `You win! ${playerSelection} beats ${computerSelection}.`
+        return `You win! ${playerSelection} beats ${computerSelection}.`;
     } else {
         computerScore++;
-        return `You lose! ${computerSelection} beats ${playerSelection}.`
+        return `You lose! ${computerSelection} beats ${playerSelection}.`;
     }
 }
 
@@ -43,3 +44,5 @@ function game() {
 }
 
 game();
+
+
