@@ -11,7 +11,6 @@ let result
 let playerScore = 0
 let computerScore = 0
 
-function game() {
 options.forEach(button => button.addEventListener('click', (e) => {
     playerSelection = e.target.id
     playerChoiceDisplay.textContent = playerSelection
